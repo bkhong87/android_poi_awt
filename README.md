@@ -5,6 +5,16 @@ Code is took from Apache Harmony, Apache Commons Imaging and witwall/appengine-a
 This project provides java.awt, javax.imagio and sfntly in jar file that is required by Apache POI on SXSSFWorkbook.
 Due to memory heap size limitation XSSFWorkbook is not able to write large amount of data. Therefore we need to migrate to SXSSFWorkbook. 
 
+Without AWT and sfntly you will get such error below.
+
+````
+// Without AWT
+java.lang.NoClassDefFoundError: Failed resolution of: Ljava/awt/font/FontRenderContext;
+// Without sfntly
+java.lang.NoClassDefFoundError: Failed resolution of: Lcom/google/typography/font/sfntly/FontFactory;
+````
+
+
 However, there is no easy implementation but to compile another jar from andob/android-awt repository and apply as library.
 
 Note*: I am new to github but wish to share the capability of SXSSFWorkbook on Android platform.
