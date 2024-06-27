@@ -1,4 +1,5 @@
-# android_poi_awt
+android_poi_sxssf_awt
+
 This is a fork of windwardadmin/android-awt & andob/android-awt.
 Code is took from Apache Harmony, Apache Commons Imaging and witwall/appengine-awt.
 
@@ -14,8 +15,19 @@ java.lang.NoClassDefFoundError: Failed resolution of: Ljava/awt/font/FontRenderC
 java.lang.NoClassDefFoundError: Failed resolution of: Lcom/google/typography/font/sfntly/FontFactory;
 ````
 
+Thanks to andob/android-awt library but we will getting error on \awtcompat\src\main\java\java\awt\font\sfntly\SfntlyFontPeer.java on the font resource.
+
+There is no OpenSans-Regular.ttf embeded in the library. So I have created the jar using Android Studio and include the font using zip software.
 
 However, there is no easy implementation but to compile another jar from andob/android-awt repository and apply as library.
+
+![image](https://github.com/bkhong87/android_poi_sxssf_awt/assets/16471081/750c0e96-ce54-4474-8490-18b6cb68e9b2)
+
+I have change the code ~~InputStream ttfInput = getClass().getResourceAsStream("OpenSans-Regular.ttf");~~ to below so library could read the font from classpath.
+````
+InputStream ttfInput = getClass().getResourceAsStream("/opensans.ttf");
+````
+
 
 Note*: I am new to github but wish to share the capability of SXSSFWorkbook on Android platform.
 
