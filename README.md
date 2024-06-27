@@ -29,7 +29,9 @@ InputStream ttfInput = getClass().getResourceAsStream("/opensans.ttf");
 ````
 
 
-Note*: I am new to github but wish to share the capability of SXSSFWorkbook on Android platform.
+Note*: I am new to github but wish to share the capability of SXSSFWorkbook on Android platform. Any mistake please correct me.
+
+
 
 1) Download awtcompat.jar & sfntly-1.0.0.jar place inside project libs/
 ````
