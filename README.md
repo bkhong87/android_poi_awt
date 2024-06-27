@@ -40,7 +40,7 @@ Note*: I am new to github but wish to share the capability of SXSSFWorkbook on A
       libs/awtcompat.jar
       libs/sfntly-1.0.0.jar
 ````
-2) Implement apache dependencies
+2) Implement jar library & apache dependencies
 ````
 dependencies {
   implementation files('/libs/awtcompat.jar')
