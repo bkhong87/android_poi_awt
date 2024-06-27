@@ -53,3 +53,6 @@ dependencies {
 }
 ````
 
+Re-sync gradle and rebuild project.
+
+Finally, start migrating to SXSSFWorkbook.
